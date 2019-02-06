@@ -1,0 +1,9 @@
+<h1>Ingredients</h1>
+
+<% @ingredients.sort_by {|ingredient| ingredient.allergens.length} %>
+<% @ingredients.each do |ingredient| %>
+  <ul>
+  <%= ingredient.name %>
+  <%= ingredient.allergens.length %>
+  </ul>
+<% end %>
